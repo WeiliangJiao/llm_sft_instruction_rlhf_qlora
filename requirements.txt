@@ -1,0 +1,9 @@
+torch
+transformers
+datasets
+peft
+bitsandbytes
+accelerate
+trl
+tqdm
+matplotlib

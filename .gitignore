@@ -1,0 +1,40 @@
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+llm_env/
+llm_env*/
+
+# Packaging outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Editors and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Training artifacts and logs
+results/
+wandb/
+checkpoints/
+outputs/
+logs/
+*.log
+*.ckpt
+*.pt
+*.bin
+
+# Notebooks
+.ipynb_checkpoints/
