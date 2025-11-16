@@ -19,13 +19,17 @@ cd llm_sft_rlhf
 python -m venv .venv
 source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 pip install --upgrade pip
-pip install -e .
+pip install -e .  # setup.py picks the correct macOS/Linux lockfile automatically
 ```
 
 Or, if you just need the dependencies without installing the package:
 
 ```bash
-pip install -r requirements.txt
+# macOS (MPS/CPU)
+pip install -r requirements-mac.txt
+
+# Linux with CUDA
+pip install -r requirements-linux-cuda.txt
 ```
 
 ## Usage Examples
@@ -90,7 +94,9 @@ llm_sft_rlhf/
 │   └── dpo_trainer.py        # DPO implementation
 ├── main.py                   # CLI interface
 ├── setup.py                  # Setuptools for packaging/install
-├── requirements.txt          # Dependencies
+├── requirements.in           # Shared pip-compile input
+├── requirements-mac.txt      # macOS lockfile (pip-compile)
+├── requirements-linux-cuda.txt # Linux/CUDA lockfile (pip-compile)
 ├── examples/                 # Example scripts
 └── Notebooks/                # Jupyter notebooks (dev)
 ```
